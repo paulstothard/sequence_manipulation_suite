@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Group DNA</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+    <link rel="stylesheet" href="styles/stylesheet.css" type="text/css" />
+    <script type="text/javascript" src="scripts/sms_common.js"></script>
+    <script type="text/javascript" src="scripts/group_dna.js"></script>
+  </head>
+
+  <body class="main" onload="document.main_form.main_submit.focus()">
+    <!-- MAIN TABLE -->
+
+    <table border="0" cellspacing="2" cellpadding="2">
+      <tbody>
+        <tr>
+          <td class="links">
+            <a href="index.html"
+              ><img
+                src="images/logo.png"
+                alt="SMS logo"
+                width="144"
+                height="56"
+                border="0"
+            /></a>
+            <!-- INSERT LINKS -->
+            <div class="category">
+              Format Conversion
+            </div>
+
+            <div class="program">
+              <a
+                href="combine_fasta.html"
+                onmouseover="self.status='Combines multiple FASTA entries into a single sequence.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Combine FASTA</a
+              ><br />
+              <a
+                href="embl_fasta.html"
+                onmouseover="self.status='Returns the entire sequence contained in an EMBL file in FASTA format.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-EMBL to FASTA</a
+              ><br />
+              <a
+                href="embl_feat.html"
+                onmouseover="self.status='Parses the feature table of an EMBL file and returns the feature sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-EMBL Feature Extractor</a
+              ><br />
+              <a
+                href="embl_trans.html"
+                onmouseover="self.status='Parses the feature table of an EMBL file and returns the protein translations.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-EMBL Trans Extractor</a
+              ><br />
+              <a
+                href="filter_dna.html"
+                onmouseover="self.status='Removes non-DNA characters from text.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Filter DNA</a
+              ><br />
+              <a
+                href="filter_protein.html"
+                onmouseover="self.status='Removes non-protein characters from text.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Filter Protein</a
+              ><br />
+              <a
+                href="genbank_fasta.html"
+                onmouseover="self.status='Returns the entire sequence contained in a GenBank file in FASTA format.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-GenBank to FASTA</a
+              ><br />
+              <a
+                href="genbank_feat.html"
+                onmouseover="self.status='Parses the feature table of a GenBank file and returns the feature sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-GenBank Feature Extractor</a
+              ><br />
+              <a
+                href="genbank_trans.html"
+                onmouseover="self.status='Parses the feature table of a GenBank file and returns the protein translations.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-GenBank Trans Extractor</a
+              ><br />
+              <a
+                href="one_to_three.html"
+                onmouseover="self.status='Converts single letter amino acid codes to three letter codes.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-One to Three</a
+              ><br />
+              <a
+                href="range_extract_dna.html"
+                onmouseover="self.status='Reads a list of positions and ranges and returns those parts of a DNA sequence.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Range Extractor DNA</a
+              ><br />
+              <a
+                href="range_extract_protein.html"
+                onmouseover="self.status='Reads a list of positions and ranges and returns those parts of a protein sequence.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Range Extractor Protein</a
+              ><br />
+              <a
+                href="rev_comp.html"
+                onmouseover="self.status='Determines the reverse-complement, reverse, or complement of the sequence you enter.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Reverse Complement</a
+              ><br />
+              <a
+                href="split_codons.html"
+                onmouseover="self.status='Separates bases according to codon position.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Split Codons</a
+              ><br />
+              <a
+                href="split_fasta.html"
+                onmouseover="self.status='Converts a FASTA sequence into multiple sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Split FASTA</a
+              ><br />
+              <a
+                href="three_to_one.html"
+                onmouseover="self.status='Converts three letter amino acid codes to one letter codes.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Three to One</a
+              ><br />
+              <a
+                href="window_extract_dna.html"
+                onmouseover="self.status='Returns DNA sequence segments specified by a position and window size.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Window Extractor DNA</a
+              ><br />
+              <a
+                href="window_extract_protein.html"
+                onmouseover="self.status='Returns protein sequence segments specified by a position and window size.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Window Extractor Protein</a
+              >
+            </div>
+
+            <div class="category">
+              Sequence Analysis
+            </div>
+
+            <div class="program">
+              <a
+                href="codon_plot.html"
+                onmouseover="self.status='Plots codon frequency (according to the codon table you enter) for each codon in a DNA sequence.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Codon Plot</a
+              ><br />
+              <a
+                href="codon_usage.html"
+                onmouseover="self.status='Returns a standard codon usage table.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Codon Usage</a
+              ><br />
+              <a
+                href="cpg_islands.html"
+                onmouseover="self.status='Returns a list of potential CpG islands.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-CpG Islands</a
+              ><br />
+              <a
+                href="dna_mw.html"
+                onmouseover="self.status='Calculates the molecular weight of DNA sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-DNA Molecular Weight</a
+              ><br />
+              <a
+                href="dna_pattern.html"
+                onmouseover="self.status='Returns positions of the patterns you enter.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-DNA Pattern Find</a
+              ><br />
+              <a
+                href="dna_stats.html"
+                onmouseover="self.status='Returns basic sequence statistics.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-DNA Stats</a
+              ><br />
+              <a
+                href="fuzzy_search_dna.html"
+                onmouseover="self.status='Returns sequences that are identical or similar to a query sequence.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Fuzzy Search DNA</a
+              ><br />
+              <a
+                href="fuzzy_search_protein.html"
+                onmouseover="self.status='Returns sequences that are identical or similar to a query sequence.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Fuzzy Search Protein</a
+              ><br />
+              <a
+                href="ident_sim.html"
+                onmouseover="self.status='Accepts aligned sequences in FASTA format and calculates the identity and similarity of each sequence pair.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Ident and Sim</a
+              ><br />
+              <a
+                href="multi_rev_trans.html"
+                onmouseover="self.status='Can be used to predict a DNA sequence in another species using a protein sequence alignment.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Multi Rev Trans</a
+              ><br />
+              <a
+                href="mutate_for_digest.html"
+                onmouseover="self.status='Finds DNA sequences that can easily be converted to a restriction site.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Mutate for Digest</a
+              ><br />
+              <a
+                href="orf_find.html"
+                onmouseover="self.status='Determines the positions of open reading frames.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-ORF Finder</a
+              ><br />
+              <a
+                href="pairwise_align_codons.html"
+                onmouseover="self.status='Returns the optimal global alignment for two coding DNA sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Pairwise Align Codons</a
+              ><br />
+              <a
+                href="pairwise_align_dna.html"
+                onmouseover="self.status='Returns the optimal global alignment for two DNA sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Pairwise Align DNA</a
+              ><br />
+              <a
+                href="pairwise_align_protein.html"
+                onmouseover="self.status='Returns the optimal global alignment for two protein sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Pairwise Align Protein</a
+              ><br />
+              <a
+                href="pcr_primer_stats.html"
+                onmouseover="self.status='Returns a report describing PCR primer properties'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-PCR Primer Stats</a
+              ><br />
+              <a
+                href="pcr_products.html"
+                onmouseover="self.status='Generates PCR products from a template and two primer sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-PCR Products</a
+              ><br />
+              <a
+                href="protein_gravy.html"
+                onmouseover="self.status='Returns the grand average of hydropathy value of protein sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Protein GRAVY</a
+              ><br />
+              <a
+                href="protein_iep.html"
+                onmouseover="self.status='Returns the predicted isoelectric point of protein sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Protein Isoelectric Point</a
+              ><br />
+              <a
+                href="protein_mw.html"
+                onmouseover="self.status='Calculates the molecular weight of protein sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Protein Molecular Weight</a
+              ><br />
+              <a
+                href="protein_pattern.html"
+                onmouseover="self.status='Returns positions of the patterns you enter.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Protein Pattern Find</a
+              ><br />
+              <a
+                href="protein_stats.html"
+                onmouseover="self.status='Returns basic sequence statistics.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Protein Stats</a
+              ><br />
+              <a
+                href="rest_digest.html"
+                onmouseover="self.status='Converts the sequence you enter into restriction fragments.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Restriction Digest</a
+              ><br />
+              <a
+                href="rest_summary.html"
+                onmouseover="self.status='Returns the number and positions of restriction sites.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Restriction Summary</a
+              ><br />
+              <a
+                href="rev_trans.html"
+                onmouseover="self.status='Can be used to convert protein into DNA.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Reverse Translate</a
+              ><br />
+              <a
+                href="translate.html"
+                onmouseover="self.status='Returns the translation in the reading frame you specify.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Translate</a
+              >
+            </div>
+
+            <div class="category">
+              Sequence Figures
+            </div>
+
+            <div class="program">
+              <a
+                href="color_align_cons.html"
+                onmouseover="self.status='Colors a sequence alignment based on sequence conservation.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Color Align Conservation</a
+              ><br />
+              <a
+                href="color_align_prop.html"
+                onmouseover="self.status='Colors a protein alignment based on biochemical properties of residues.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Color Align Properties</a
+              ><br />
+              <a
+                href="group_dna.html"
+                onmouseover="self.status='Numbers and groups DNA according to your specifications.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Group DNA</a
+              ><br />
+              <a
+                href="group_protein.html"
+                onmouseover="self.status='Numbers and groups amino acids according to your specifications.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Group Protein</a
+              ><br />
+              <a
+                href="primer_map.html"
+                onmouseover="self.status='Shows PCR primer annealing sites, translations, and restriction sites.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Primer Map</a
+              ><br />
+              <a
+                href="rest_map.html"
+                onmouseover="self.status='Shows restriction sites and protein translations.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Restriction Map</a
+              ><br />
+              <a
+                href="trans_map.html"
+                onmouseover="self.status='Shows protein translations.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Translation Map</a
+              >
+            </div>
+
+            <div class="category">
+              Random Sequences
+            </div>
+
+            <div class="program">
+              <a
+                href="mutate_dna.html"
+                onmouseover="self.status='Introduces random mutations into DNA sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Mutate DNA</a
+              ><br />
+              <a
+                href="mutate_protein.html"
+                onmouseover="self.status='Introduces random mutations into protein sequences.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Mutate Protein</a
+              ><br />
+              <a
+                href="random_coding_dna.html"
+                onmouseover="self.status='Generates a random coding sequence of the length you specify.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Random Coding DNA</a
+              ><br />
+              <a
+                href="random_dna.html"
+                onmouseover="self.status='Generates a random DNA sequence of the length you specify.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Random DNA Sequence</a
+              ><br />
+              <a
+                href="random_dna_regions.html"
+                onmouseover="self.status='Replaces regions of the DNA sequences you enter with random bases.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Random DNA Regions</a
+              ><br />
+              <a
+                href="random_protein.html"
+                onmouseover="self.status='Generates a random protein sequence of the length you specify.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Random Protein Sequence</a
+              ><br />
+              <a
+                href="random_protein_regions.html"
+                onmouseover="self.status='Replaces regions of the protein sequences you enter with random residues.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Random Protein Regions</a
+              ><br />
+              <a
+                href="sample_dna.html"
+                onmouseover="self.status='Samples bases from a DNA sequence with replacement.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Sample DNA</a
+              ><br />
+              <a
+                href="sample_protein.html"
+                onmouseover="self.status='Samples residues from a protein sequence with replacement.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Sample Protein</a
+              ><br />
+              <a
+                href="shuffle_dna.html"
+                onmouseover="self.status='Randomly shuffles the DNA sequences you enter.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Shuffle DNA</a
+              ><br />
+              <a
+                href="shuffle_protein.html"
+                onmouseover="self.status='Randomly shuffles the protein sequences you enter.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Shuffle Protein</a
+              >
+            </div>
+
+            <div class="category">
+              Miscellaneous
+            </div>
+
+            <div class="program">
+              <a
+                href="iupac.html"
+                onmouseover="self.status='IUPAC codes for DNA and protein.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-IUPAC codes</a
+              ><br />
+              <a
+                href="genetic_code.html"
+                onmouseover="self.status='The genetic codes used in the Sequence Manipulation Suite.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Genetic codes</a
+              ><br />
+              <a
+                href="browser_compat.html"
+                onmouseover="self.status='Browser compatibility.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Browser compatibility</a
+              ><br />
+              <a
+                href="mirror.html"
+                onmouseover="self.status='Mirror the Sequence Manipulation Suite.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Mirror this site</a
+              ><br />
+              <a
+                href="mirror.html"
+                onmouseover="self.status='Use the Sequence Manipulation Suite off-line.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Use this site off-line</a
+              ><br />
+              <a
+                href="about.html"
+                onmouseover="self.status='About the Sequence Manipulation Suite.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-About this site</a
+              ><br />
+              <a
+                href="acknowledgments.html"
+                onmouseover="self.status='Acknowledgments.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Acknowledgments</a
+              ><br />
+              <a
+                href="reference.html"
+                onmouseover="self.status='Citing the Sequence Manipulation Suite.'; return true;"
+                onmouseout="self.status=' '; return true;"
+                >-Reference</a
+              >
+            </div>
+            <!-- END INSERT LINKS -->
+
+            <div class="copyright">
+              <br />
+              The Sequence Manipulation Suite Copyright &copy; 2000, 2004 Paul
+              Stothard. Send questions and comments to stothard@ualberta.ca
+            </div>
+
+            <center>
+              <div class="program">
+                <a href="index.html" target="_top">home</a>
+              </div>
+            </center>
+          </td>
+          <!-- PROGRAM CONTENT -->
+
+          <td class="program">
+            <table border="0" cellspacing="0" cellpadding="2">
+              <tbody>
+                <tr>
+                  <td class="sms">Sequence Manipulation Suite:</td>
+                </tr>
+
+                <tr>
+                  <td class="title">Group DNA</td>
+                </tr>
+
+                <tr>
+                  <td class="description">
+                    Group DNA adjusts the spacing of DNA sequences and adds
+                    numbering. You can specify the group size (the number of
+                    bases per group), as well as the number of bases per line.
+                    The output of this program can serve as a convenient
+                    reference, since the numbering and spacing allows you to
+                    quickly locate specific bases.<br />
+                    <br />
+
+                    <form action="" name="main_form" id="main_form">
+                      Paste the raw sequence or one or more FASTA sequences into
+                      the text area below. Input limit is 100,000,000
+                      characters.<br />
+                      <textarea rows="6" cols="61">
+&gt;CDS /gene="fem-2" (exons highlighted in uppercase by GenBank Feature Extractor)
+gaacgcgaatgcctctctctctttcgatgggtatgccaattgtccacattcactcgtgttgcctcctctttgccaacacgcaagacaccagaaacgcgtcaaccaaagagaaaaagacgccgacaacgggcagcactcgcgagagacaaaggttatcgcgttgtgttattatacattcgcatccgggtcaactttagtccgttgaacatgcttcttgaaaacctagttctcttaaaataacgttttagaagttttggtcttcagATGTCTGATTCGCTAAATCATCCATCGAGTTCTACGGTGCATGCAGATGATGGATTCGAGCCACCAACATCTCCGGAAGACAACAACAAAAAACCGTCTTTAGAACAAATTAAACAGGAAAGAGAAGCGTTGTTTACGgttagttacctattagctgcaagttttgaaaaagcggaatctgtaaaaagcggaatctgtaaaaaaaacatctaaggaataattctgaaaagaaaaagtttctaaatgttaatcggaatccaatttttatgaaattatttaaaaaaaaactaaaattagtttctaaaaaatttttctaaagtaattggaccatgtgaaggtacacccacttgttccaatatgccatatctaactgtaaaataatttgattctcatgagaatatttttcagGATCTATTCGCAGATCGTCGACGAAGCGCTCGTTCTGTGATTGAAGAAGCTTTCCAAAACGAACTCATGAGTGCTGAACCAGTCCAGCCAAACGTGCCGAATCCACATTgtgagttggaaatttttatttgataaccaagagaaaaaaagttctacctttttttcaaaaacctttccaaaaatgattccatctgatataggattaagaaaaatattttccgaaatctctgcttttcagCGATTCCCATTCGTTTCCGTCATCAACCAGTTGCTGGACCTGCTCATGATGTTTTCGGAGACGCGGTGCATTCAATTTTTCAAAAAATAATGTCCAGgtatacactatttttgcatatttttcttgccaaatttggtcaaaaaccgtagtacaacccaaaaagtttcttcatttcagAGGAGTGAACGCGGATTATAGTCATTGGATGTCATATTGGATCGCGTTGGGAATCGACAAAAAAACACAAATGAACTATCATATGAAACCGTTTTGCAAAGATACTTATGCAACTGAAGGCTCCTTAGgtaggttagtcttttctaggcacagaagagtgagaaaattctaaatttctgagcagtctgctttttgttttccttgagtttttacttaaagctcttaaaagaaatctaggcgtgaagttcgagccttgtaccataccacaacagcattccaaatgttacagAAGCGAAACAAACATTTACTGATAAAATCAGGTCAGCTGTTGAGGAAATTATCTGGAAGTCCGCTGAATATTGTGATATTCTTAGCGAGAAGTGGACAGGAATTCATGTGTCGGCCGACCAACTGAAAGGTCAAAGAAATAAGCAAGAAGATCGTTTTGTGGCTTATCCAAATGGACAATACATGAATCGTGGACAGgttagtgcgaatcggggactcaagatttactgaaatagtgaagagaaaacaaaagaaaactatattttcaaaaaaaatgagaactctaataaacagaatgaaaaacattcaaagctacagtagtatttccagctggagtttccagagccaaaaaaatgcgagtattactgtagttttgaaattggtttctcactttacgtacgattttttgatttttttttcagactcttcatatgaaaaaaaatcatgttttctcctttacaagatttttttgatctcaaaacatttccagAGTGACATTTCACTTCTTGCGGTGTTCGATGGGCATGGCGGACACGAGTGCTCTCAATATGCAGCTGCTCATTTCTGGGAAGCATGGTCCGATGCTCAACATCATCATTCACAAGATATGAAACTTGACGAACTCCTAGAAAAGGCTCTAGAAACATTGGACGAAAGAATGACAGTCAGAAGTGTTCGAGAATCTTGGAAAGGTGGAACCACTGCTGTCTGCTGTGCTGTTGATTTGAACACTAATCAAATCGCATTTGCCTGGCTTGGAGATTCACCAGGgtaatcaatttttttttagtttttggaactttacgtcccgaaaaattattcctttatcacctaattcctacagtaacccaagctccgaattaaataaagttaaagcgtggtatacacataaaaataagaaaaaattgttcatgaaatccatttttccagTTACATCATGTCAAACTTGGAGTTCCGCAAATTCACTACTGAACACTCCCCGTCTGACCCGGAGGAATGTCGACGAGTCGAAGAAGTCGGTGGCCAGATTTTTGTGATCGGTGGTGAGCTCCGTGTGAATGGAGTACTCAACCTGACGCGAGCACTAGGAGACGTACCTGGAAGACCAATGATATCCAACAAACCTGATACCTTACTGAAGACGATCGAACCTGCGGATTATCTTGTTTTGTTGGCCTGTGACGGGATTTCTGACGTCTTCAACACTAGTGATTTGTACAATTTGGTTCAGGCTTTTGTCAATGAATATGACGTAGAAGgtatcaaactgatcgtttttcacatcacaaaattcttgaattttccagATTATCACGAACTTGCACGCTACATTTGCAATCAAGCAGTTTCAGCTGGAAGTGCTGACAATGTGACAGTAGTTATAGGTTTCCTCCGTCCACCAGAAGACGTTTGGCGTGTAATGAAAACAGACTCGGATGATGAAGAGAGCGAGCTCGAGGAAGAAGATGACAATGAATAGtttattgcaagttttccaaaacttttccaatttccctgggtattgattagcatccatatcttacggcgattatatcaattgtaacattatttctgtttctccccccacctctcaaattttcaaatgaccctttttcttttcgtctacctgtatcgttttccattcatctccccccctccactgtggtatatcattttgtcattagaaagtattattttgattttcattggcagtagaagacaacaggatacagaagaggttttcacag
+</textarea
+                      ><br />
+
+                      <input
+                        type="button"
+                        value="Submit"
+                        name="main_submit"
+                        onclick="try{groupDna(document)} catch(e) {alert('The following error was encountered: ' + e);}"
+                      />
+                      <input
+                        type="button"
+                        value="Clear"
+                        onclick="document.forms[0].elements[0].value = ' '"
+                      />
+                      <input type="reset" value="Reset" />
+
+                      <ul>
+                        <li>
+                          Use a group size of
+                          <select>
+                            <option value="10" selected="selected">
+                              10
+                            </option>
+
+                            <option value="5">
+                              5
+                            </option>
+
+                            <option value="3">
+                              3
+                            </option>
+                          </select>
+                          and display
+                          <select>
+                            <option value="100">
+                              100
+                            </option>
+
+                            <option value="90">
+                              90
+                            </option>
+
+                            <option value="80" selected="selected">
+                              80
+                            </option>
+
+                            <option value="70">
+                              70
+                            </option>
+
+                            <option value="60">
+                              60
+                            </option>
+
+                            <option value="50">
+                              50
+                            </option>
+
+                            <option value="40">
+                              40
+                            </option>
+
+                            <option value="30">
+                              30
+                            </option>
+                          </select>
+                          bases per line.
+                        </li>
+
+                        <li>
+                          <select>
+                            <option value="one" selected="selected">
+                              Don't show
+                            </option>
+
+                            <option value="two">
+                              Show
+                            </option>
+                          </select>
+                          the reverse strand.
+                        </li>
+
+                        <li>
+                          Show numbering
+                          <select>
+                            <option value="left" selected="selected">
+                              to the left of
+                            </option>
+
+                            <option value="above">
+                              above
+                            </option>
+
+                            <option value="right">
+                              to the right of
+                            </option>
+                          </select>
+                          the sequence.
+                        </li>
+
+                        <li>
+                          Start the numbering at <input type="text" value="1" />
+                        </li>
+                      </ul>
+                    </form>
+                    *This page requires JavaScript. See
+                    <a href="browser_compat.html">browser compatibility.</a
+                    ><br />
+                    *You can <a href="mirror.html">mirror this page</a> or
+                    <a href="mirror.html">use it off-line</a>.<br />
+                    <br />
+
+                    <center>
+                      <a href="group_dna.html" target="_blank">new window</a> |
+                      <a href="index.html">home</a> |
+                      <a href="reference.html">citation</a>
+                    </center>
+                    <span class="version">Mon Mar 4 22:50:40 2019</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><span class="valid">Valid XHTML 1.0; Valid CSS</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- MAIN TABLE END -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
