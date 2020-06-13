@@ -8,11 +8,27 @@ The Sequence Manipulation Suite can be used online [here](https://sites.ualberta
 
 ### To mirror the Sequence Manipulation Suite
 
-Download the Sequence Manipulation Suite and place the **html** directory into a directory from which your server will serve HTML files.
+* Download the Sequence Manipulation Suite:
+
+```bash
+git clone git@github.com:paulstothard/sequence_manipulation_suite.git
+```
+
+or download the [latest release as a zip file](https://github.com/paulstothard/sequence_manipulation_suite/archive/v2.0.0.zip).
+
+* Place the **html** directory into a directory from which your server will serve HTML files.
 
 ### To run the Sequence Manipulation Suite locally
 
-Download the Sequence Manipulation Suite and load **index.html** from the html directory into a web browser.
+* Download the Sequence Manipulation Suite:
+
+```bash
+git clone git@github.com:paulstothard/sequence_manipulation_suite.git
+```
+
+or download the [latest release as a zip file](https://github.com/paulstothard/sequence_manipulation_suite/archive/v2.0.0.zip).
+
+* Load **index.html** from the html directory into a web browser.
 
 ### Citation
 
