@@ -14,9 +14,9 @@ The Sequence Manipulation Suite can be used online at [https://paulstothard.gith
 git clone git@github.com:paulstothard/sequence_manipulation_suite.git
 ```
 
-or download the [latest release as a zip file](https://github.com/paulstothard/sequence_manipulation_suite/archive/v2.0.3.zip).
+or download the [latest release](https://github.com/paulstothard/sequence_manipulation_suite/releases/).
 
-* Move the contents of the **docs** directory into a directory from which your server will serve HTML files.
+* Move the contents of the `docs` directory into a directory from which your server will serve HTML files.
 
 ### To run the Sequence Manipulation Suite locally
 
@@ -26,9 +26,9 @@ or download the [latest release as a zip file](https://github.com/paulstothard/s
 git clone git@github.com:paulstothard/sequence_manipulation_suite.git
 ```
 
-or download the [latest release as a zip file](https://github.com/paulstothard/sequence_manipulation_suite/archive/v2.0.3.zip).
+or download the [latest release](https://github.com/paulstothard/sequence_manipulation_suite/releases/).
 
-* Load **index.html** from the **docs** directory into a web browser.
+* Load `index.html` from the `docs` directory into a web browser.
 
 ### Citation
 
