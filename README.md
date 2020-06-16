@@ -4,7 +4,7 @@ A collection of simple JavaScript programs for generating, formatting, and analy
 
 ### To use the Sequence Manipulation Suite online
 
-The Sequence Manipulation Suite can be used online [here](https://sites.ualberta.ca/~stothard/sms2/) and [here](https://www.bioinformatics.org/sms2/).
+The Sequence Manipulation Suite can be used online at [https://paulstothard.github.io/sequence\_manipulation\_suite/](https://paulstothard.github.io/sequence_manipulation_suite/).
 
 ### To mirror the Sequence Manipulation Suite
 
@@ -14,9 +14,9 @@ The Sequence Manipulation Suite can be used online [here](https://sites.ualberta
 git clone git@github.com:paulstothard/sequence_manipulation_suite.git
 ```
 
-or download the [latest release as a zip file](https://github.com/paulstothard/sequence_manipulation_suite/archive/v2.0.2.zip).
+or download the [latest release as a zip file](https://github.com/paulstothard/sequence_manipulation_suite/archive/v2.0.3.zip).
 
-* Place the **html** directory into a directory from which your server will serve HTML files.
+* Move the contents of the **docs** directory into a directory from which your server will serve HTML files.
 
 ### To run the Sequence Manipulation Suite locally
 
@@ -26,9 +26,9 @@ or download the [latest release as a zip file](https://github.com/paulstothard/s
 git clone git@github.com:paulstothard/sequence_manipulation_suite.git
 ```
 
-or download the [latest release as a zip file](https://github.com/paulstothard/sequence_manipulation_suite/archive/v2.0.2.zip).
+or download the [latest release as a zip file](https://github.com/paulstothard/sequence_manipulation_suite/archive/v2.0.3.zip).
 
-* Load **index.html** from the html directory into a web browser.
+* Load **index.html** from the **docs** directory into a web browser.
 
 ### Citation
 
