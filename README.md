@@ -32,7 +32,7 @@ or download the [latest release](https://github.com/paulstothard/sequence_manipu
 
 ### Citation
 
-Stothard P (2000) The Sequence Manipulation Suite: JavaScript programs for analyzing and formatting protein and DNA sequences. Biotechniques 28:1102-1104.
+[Stothard P (2000) The Sequence Manipulation Suite: JavaScript programs for analyzing and formatting protein and DNA sequences. Biotechniques 28:1102-1104.](https://pubmed.ncbi.nlm.nih.gov/10868275/)
 
 ### Programs
 
