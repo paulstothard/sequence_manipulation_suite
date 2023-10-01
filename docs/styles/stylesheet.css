@@ -159,3 +159,9 @@ span.valid {
   font-size: xx-small;
   color: #808080;
 }
+textarea {
+  font-family: 'DejaVu Sans Mono', monospace;
+  font-size: small;
+  color: #000000;
+  background: rgb(255, 255, 255);
+}
