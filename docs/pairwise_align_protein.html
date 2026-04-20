@@ -8,10 +8,12 @@
     <script type="text/javascript" src="scripts/sms_common.js"></script>
     <script
       type="text/javascript"
+      src="scripts/pairwise_affine_align.js"
+    ></script>
+    <script
+      type="text/javascript"
       src="scripts/pairwise_align_protein.js"
     ></script>
-    <script type="text/javascript" src="scripts/align_pair_linear.js"></script>
-    <script type="text/javascript" src="scripts/align_pair_quad.js"></script>
   </head>
 
   <body class="main" onload="document.main_form.main_submit.focus()">
@@ -371,8 +373,9 @@
                 <tr>
                   <td class="description">
                     Pairwise Align Protein accepts two protein sequences and
-                    determines the optimal global alignment. Use Pairwise Align
-                    Protein to look for conserved sequence regions.<br />
+                    determines the optimal global alignment with affine gap
+                    penalties. Use Pairwise Align Protein to look for conserved
+                    sequence regions.<br />
                     <br />
 
                     <form action="" name="main_form" id="main_form">
@@ -439,172 +442,70 @@ MGGMNRRPILTIITLETPQGLLLGRRCFEVRVCACPGRDRRTEEDNY
                         </li>
 
                         <li>
-                          Value for gaps preceding a sequence
+                          Gap opening penalty
                           <select>
-                            <option value="-6">
+                            <option value="20">
+                              20
+                            </option>
+                            <option value="18">
+                              18
+                            </option>
+                            <option value="16">
+                              16
+                            </option>
+                            <option value="14">
+                              14
+                            </option>
+                            <option selected="selected" value="12">
+                              12
+                            </option>
+                            <option value="10">
+                              10
+                            </option>
+                            <option value="8">
+                              8
+                            </option>
+                            <option value="6">
                               6
                             </option>
-
-                            <option value="-5">
-                              5
-                            </option>
-
-                            <option value="-4">
+                            <option value="4">
                               4
                             </option>
-
-                            <option value="-3">
-                              3
-                            </option>
-
-                            <option value="-2">
-                              2
-                            </option>
-
-                            <option value="-1">
-                              1
-                            </option>
-
-                            <option selected="selected" value="0">
-                              0
-                            </option>
-
-                            <option value="1">
-                              -1
-                            </option>
-
                             <option value="2">
-                              -2
-                            </option>
-
-                            <option value="3">
-                              -3
-                            </option>
-
-                            <option value="4">
-                              -4
-                            </option>
-
-                            <option value="5">
-                              -5
-                            </option>
-
-                            <option value="6">
-                              -6
+                              2
                             </option>
                           </select>
                         </li>
 
                         <li>
-                          Value for internal gaps
+                          Gap extension penalty
                           <select>
-                            <option value="-6">
+                            <option value="8">
+                              8
+                            </option>
+                            <option value="7">
+                              7
+                            </option>
+                            <option value="6">
                               6
                             </option>
-
-                            <option value="-5">
+                            <option value="5">
                               5
                             </option>
-
-                            <option value="-4">
+                            <option value="4">
                               4
                             </option>
-
-                            <option value="-3">
+                            <option value="3">
                               3
                             </option>
-
-                            <option value="-2">
+                            <option selected="selected" value="2">
                               2
                             </option>
-
-                            <option value="-1">
+                            <option value="1">
                               1
                             </option>
-
                             <option value="0">
                               0
-                            </option>
-
-                            <option value="1">
-                              -1
-                            </option>
-
-                            <option selected="selected" value="2">
-                              -2
-                            </option>
-
-                            <option value="3">
-                              -3
-                            </option>
-
-                            <option value="4">
-                              -4
-                            </option>
-
-                            <option value="5">
-                              -5
-                            </option>
-
-                            <option value="6">
-                              -6
-                            </option>
-                          </select>
-                        </li>
-
-                        <li>
-                          Value for gaps following a sequence
-                          <select>
-                            <option value="-6">
-                              6
-                            </option>
-
-                            <option value="-5">
-                              5
-                            </option>
-
-                            <option value="-4">
-                              4
-                            </option>
-
-                            <option value="-3">
-                              3
-                            </option>
-
-                            <option value="-2">
-                              2
-                            </option>
-
-                            <option value="-1">
-                              1
-                            </option>
-
-                            <option selected="selected" value="0">
-                              0
-                            </option>
-
-                            <option value="1">
-                              -1
-                            </option>
-
-                            <option value="2">
-                              -2
-                            </option>
-
-                            <option value="3">
-                              -3
-                            </option>
-
-                            <option value="4">
-                              -4
-                            </option>
-
-                            <option value="5">
-                              -5
-                            </option>
-
-                            <option value="6">
-                              -6
                             </option>
                           </select>
                         </li>
@@ -624,7 +525,7 @@ MGGMNRRPILTIITLETPQGLLLGRRCFEVRVCACPGRDRRTEEDNY
                       | <a href="index.html">home</a> |
                       <a href="reference.html">citation</a>
                     </center>
-                    <span class="version">Sun  1 Oct 12:00:07 2023</span>
+                    <span class="version">Mon 20 Apr 11:52:07 2026</span>
                   </td>
                 </tr>
 

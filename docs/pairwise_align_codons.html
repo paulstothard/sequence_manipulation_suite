@@ -8,15 +8,11 @@
     <script type="text/javascript" src="scripts/sms_common.js"></script>
     <script
       type="text/javascript"
+      src="scripts/pairwise_codon_align.js"
+    ></script>
+    <script
+      type="text/javascript"
       src="scripts/pairwise_align_codons.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="scripts/align_pair_codons_linear.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="scripts/align_pair_codons_quad.js"
     ></script>
   </head>
 
@@ -376,21 +372,25 @@
 
                 <tr>
                   <td class="description">
-                    Pairwise Align Codons accepts two coding sequences and
-                    determines the optimal global alignment. The scoring matrix
-                    used to calculate the alignment is described in
+                    Pairwise Align Codons accepts two coding DNA sequences and
+                    determines the optimal global pairwise alignment at the
+                    codon level using an affine gap penalty model. Alignment is
+                    scored using the empirical codon substitution matrix of
                     <a
                       href="https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;list_uids=15927081&amp;dopt=Abstract"
                       target="_blank"
                       >Schneider et al. (2005)</a
-                    >. Use Pairwise Align Codons to look for conserved coding
-                    sequence regions. Only the bases A,C,G,T and U are used in
-                    the alignment.<br />
+                    > (BMC Bioinformatics 6:134), which assigns log-odds scores
+                    to all 64&#215;64 codon pairs based on observed substitution
+                    frequencies across aligned protein families. Gaps are
+                    represented as triplets (---) to preserve codon structure.
+                    Only the bases A, C, G, T, and U are accepted; U is treated
+                    as T. Input sequences must be divisible by 3.<br />
                     <br />
 
                     <form action="" name="main_form" id="main_form">
                       Paste sequence one (in raw sequence or FASTA format) into
-                      the text area below. Input limit is 6,000,000
+                      the text area below. Input limit is 20,000
                       characters.<br />
                       <textarea rows="6" cols="61">
 &gt;sequence one
@@ -398,7 +398,7 @@ atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatg
 </textarea
                       ><br />
                       Paste sequence two (in raw sequence or FASTA format) into
-                      the text area below. Input limit is 6,000,000
+                      the text area below. Input limit is 20,000
                       characters.<br />
                       <textarea rows="6" cols="61">
 &gt;sequence two
@@ -423,172 +423,49 @@ caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcac
 
                       <ul>
                         <li>
-                          Value for gaps preceding a sequence
+                          Gap opening penalty
                           <select>
-                            <option value="-6">
-                              6
+                            <option value="60">
+                              60
                             </option>
-
-                            <option value="-5">
-                              5
+                            <option value="50">
+                              50
                             </option>
-
-                            <option value="-4">
-                              4
+                            <option selected="selected" value="40">
+                              40
                             </option>
-
-                            <option value="-3">
-                              3
+                            <option value="30">
+                              30
                             </option>
-
-                            <option value="-2">
-                              2
+                            <option value="20">
+                              20
                             </option>
-
-                            <option value="-1">
-                              1
-                            </option>
-
-                            <option selected="selected" value="0">
-                              0
-                            </option>
-
-                            <option value="1">
-                              -1
-                            </option>
-
-                            <option value="2">
-                              -2
-                            </option>
-
-                            <option value="3">
-                              -3
-                            </option>
-
-                            <option value="4">
-                              -4
-                            </option>
-
-                            <option value="5">
-                              -5
-                            </option>
-
-                            <option value="6">
-                              -6
+                            <option value="10">
+                              10
                             </option>
                           </select>
                         </li>
 
                         <li>
-                          Value for internal gaps
+                          Gap extension penalty
                           <select>
-                            <option value="-6">
-                              6
+                            <option value="20">
+                              20
                             </option>
-
-                            <option value="-5">
-                              5
+                            <option value="15">
+                              15
                             </option>
-
-                            <option value="-4">
-                              4
+                            <option selected="selected" value="10">
+                              10
                             </option>
-
-                            <option value="-3">
-                              3
-                            </option>
-
-                            <option value="-2">
-                              2
-                            </option>
-
-                            <option value="-1">
-                              1
-                            </option>
-
-                            <option value="0">
-                              0
-                            </option>
-
-                            <option value="1">
-                              -1
-                            </option>
-
-                            <option selected="selected" value="2">
-                              -2
-                            </option>
-
-                            <option value="3">
-                              -3
-                            </option>
-
-                            <option value="4">
-                              -4
-                            </option>
-
                             <option value="5">
-                              -5
-                            </option>
-
-                            <option value="6">
-                              -6
-                            </option>
-                          </select>
-                        </li>
-
-                        <li>
-                          Value for gaps following a sequence
-                          <select>
-                            <option value="-6">
-                              6
-                            </option>
-
-                            <option value="-5">
                               5
                             </option>
-
-                            <option value="-4">
-                              4
-                            </option>
-
-                            <option value="-3">
-                              3
-                            </option>
-
-                            <option value="-2">
-                              2
-                            </option>
-
-                            <option value="-1">
-                              1
-                            </option>
-
-                            <option selected="selected" value="0">
-                              0
-                            </option>
-
-                            <option value="1">
-                              -1
-                            </option>
-
                             <option value="2">
-                              -2
+                              2
                             </option>
-
-                            <option value="3">
-                              -3
-                            </option>
-
-                            <option value="4">
-                              -4
-                            </option>
-
-                            <option value="5">
-                              -5
-                            </option>
-
-                            <option value="6">
-                              -6
+                            <option value="1">
+                              1
                             </option>
                           </select>
                         </li>
@@ -608,7 +485,7 @@ caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcac
                       | <a href="index.html">home</a> |
                       <a href="reference.html">citation</a>
                     </center>
-                    <span class="version">Sun  1 Oct 12:00:07 2023</span>
+                    <span class="version">Mon 20 Apr 11:52:07 2026</span>
                   </td>
                 </tr>
 
