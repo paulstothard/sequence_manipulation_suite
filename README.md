@@ -2,9 +2,7 @@
 
 A collection of simple JavaScript programs for generating, formatting, and analyzing short DNA and protein sequences. The Sequence Manipulation Suite is commonly used by molecular biologists, for teaching purposes, and for program and algorithm testing.
 
-### Newer version
-
-A newer version, Sequence Manipulation Suite 3 (SMS3), is available at [https://paulstothard.github.io/sequence-manipulation-suite/](https://paulstothard.github.io/sequence-manipulation-suite/). SMS3 is a local-first browser toolkit with updated sequence, protein, table, plot, viewer, and workflow tools.
+> **Looking for the newer SMS3?** Sequence Manipulation Suite 3 is available at [https://paulstothard.github.io/sequence-manipulation-suite/](https://paulstothard.github.io/sequence-manipulation-suite/). SMS3 is a local-first browser toolkit with updated sequence, protein, table, plot, viewer, and workflow tools.
 
 ### To use the Sequence Manipulation Suite online
 
