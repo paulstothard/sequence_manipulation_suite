@@ -165,3 +165,28 @@ textarea {
   color: #000000;
   background: rgb(255, 255, 255);
 }
+/* SMS3 NOTICE START */
+div.sms3_notice {
+  margin: 0.75em 0 1em 0;
+  padding: 0.6em 0.75em;
+  border: 1px solid #cccccc;
+  color: #000000;
+  background-color: #f6f6f6;
+}
+div.sms3_notice a {
+  color: #000099;
+  text-decoration: none;
+}
+div.sms3_notice a:visited {
+  color: #000099;
+  text-decoration: none;
+}
+div.sms3_notice a:hover {
+  color: #ff0000;
+  text-decoration: underline;
+}
+div.sms3_notice a:active {
+  color: #000099;
+  text-decoration: none;
+}
+/* SMS3 NOTICE END */
